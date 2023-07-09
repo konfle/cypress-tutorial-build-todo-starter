@@ -18,10 +18,10 @@ export default class TodoApp extends Component {
     this.handleTodoSubmit = this.handleTodoSubmit.bind(this)
   }
 
-componentDidMount () {
-  loadTodos()
-    .then(({data}) => this.setState({todos: data}))
-}
+  componentDidMount () {
+    loadTodos()
+      .then(({data}) => this.setState({todos: data}))
+  }
 
 handleNewTodoChange (evt) {
   this.setState({currentTodo: evt.target.value})
