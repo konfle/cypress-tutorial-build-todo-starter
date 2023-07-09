@@ -28,3 +28,7 @@ npm run cypress
 2. Text inputs
 
     I have been working on creating the first real test and implementing the function under test. I saw how to find and interact with elements on a page and how to create assertions about their behaviour. I also looked at best practices such as using beforeEach and defining the baseUrl of the application to remove duplicate code.
+
+3. Form submission and XHRs
+
+    I implemented form submission for the todo app, using cy.server() and cy.route() to call our API. Focusing first on the 'happy path' of the application. Once the form worked, I used another stubbed XHR call to set up a failure scenario and implemented the code to properly display the error message.
