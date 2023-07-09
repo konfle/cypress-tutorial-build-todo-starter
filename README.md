@@ -1,3 +1,20 @@
-# Build and test an application using Cypress
+# First attempt to learn Cypress testing framework.
 
-This repository is the starting point for an official Cypress tutorial. We encourage you to clone this repo and follow along.
+At beging I decide to follow the official video tutorial from [Cypress docs](https://docs.cypress.io/examples/tutorials).
+
+## Commands
+
+Install project dependencies
+```console
+npm install
+```
+
+Run application under test
+```console
+npm run dev
+```
+
+Run Cypress test runner
+```console
+npm run cypress
+```
