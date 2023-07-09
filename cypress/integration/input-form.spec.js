@@ -17,9 +17,12 @@ describe("Input form", () => {
     })
 
     context("Form submission", () => {
+        beforeEach(() => {
+            cy.server()
+        })
+
         it("Adds a new todo on submit", () => {
           const itemText = "Buy eggs"
-          cy.server()
           cy.route("POST", "/api/todos", {
             name: itemText,
             id: 1,
@@ -37,7 +40,6 @@ describe("Input form", () => {
         })
 
         it("Shows an error message on a failed submission", () => {
-            cy.server()
             cy.route({
                 url: "/api/todos",
                 method: "POST",
