@@ -36,7 +36,7 @@ describe("Input form", () => {
             .and("contain", itemText)
         })
 
-        it.only("Shows an error message on a failed submission", () => {
+        it("Shows an error message on a failed submission", () => {
             cy.server()
             cy.route({
                 url: "/api/todos",

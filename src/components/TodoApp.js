@@ -30,6 +30,7 @@ handleTodoSubmit (evt) {
       todos: this.state.todos.concat(data),
       currentTodo: " "
     }))
+    .catch(() => this.setState({error: true}))
 }
 
   render () {
@@ -38,6 +39,7 @@ handleTodoSubmit (evt) {
         <div>
           <header className="header">
             <h1>todos</h1>
+            {this.state.error ? <span className='error'> Oh no!</span> : null}
             <TodoForm 
             currentTodo={this.state.currentTodo}
             handleTodoSubmit={this.handleTodoSubmit}
