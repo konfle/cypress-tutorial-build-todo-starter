@@ -34,9 +34,17 @@ describe("List items", () => {
           .find(".destroy")
           .invoke("show", )
           .click()
+        
+          /* 
+          The not.contains assertion is replaced with a callback function
+          inside the should assertion. The callback function uses Chai assertions
+          (expect) to check for the absence of the "Milk" text within the $list element.
+          */
 
-        cy.get("@list")
-          .should("have.length", 3)
-          .and("not.contains", "Milk")
+          cy.get("@list")
+            .should(($list) => {
+            expect($list).to.have.length(3);
+            expect($list.text()).to.not.contain("Milk");
+          })
     })
 })
