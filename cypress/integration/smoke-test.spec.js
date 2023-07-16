@@ -3,10 +3,10 @@ describe("The application loads", () => {
       cy.seedAndVisit([])
   })
 
-    it("navigates to the / route", () => {
+    it("Navigates to the / route", () => {
     });
 
-    it("has the basic Todo list container", () => {
+    it("Has the basic Todo list container", () => {
       cy.get(".todo-list").should("exist");
     });
 });

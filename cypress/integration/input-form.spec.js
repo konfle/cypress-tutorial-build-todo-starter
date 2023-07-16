@@ -3,12 +3,12 @@ describe("Input form", () => {
         cy.seedAndVisit([])
     })
 
-    it("focuses input on load", () => {
+    it("Focuses input on load", () => {
         cy.focused()
           .should("have.class", "new-todo")
     })
 
-    it("accepts input", () => {
+    it("Accepts input", () => {
         const typedText = "Buy Milk"
 
         cy.get(".new-todo")
