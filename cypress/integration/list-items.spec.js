@@ -20,23 +20,23 @@ describe("List items", () => {
 
     it.only("Removes a todo", () => {
         cy.route({
-            url: "/api/todos/1",
-            method: "DELETE",
-            status: 200,
-            response: {}
+          url: "/api/todos/1",
+          method: "DELETE",
+          status: 200,
+          response: {}
         })
 
         cy.get(".todo-list li")
-            .as("list")
+          .as("list")
         
         cy.get("@list")
-            .first()
-            .find(".destroy")
-            .invoke("show", )
-            .click()
+          .first()
+          .find(".destroy")
+          .invoke("show", )
+          .click()
 
         cy.get("@list")
-            .should("have.length", 3)
-            .and("not.contains", "Milk")
+          .should("have.length", 3)
+          .and("not.contains", "Milk")
     })
 })
