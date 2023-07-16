@@ -7,8 +7,9 @@ describe("List items", () => {
         cy.get(".todo-list li")
           .filter(".completed")
           .should("have.length", 1)
-          .and("contains", "Eggs")
           .find(".toggle")
           .should("be.checked")
+          
+        cy.contains(".todo-list li.completed", "Eggs")
     })
 })
