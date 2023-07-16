@@ -40,6 +40,7 @@ handleTodoSubmit (evt) {
 }
 
   render () {
+    const reamining = this.state.todos.filter(t => !t.isComplete).length
     return (
       <Router>
         <div>
@@ -54,7 +55,7 @@ handleTodoSubmit (evt) {
           <section className="main">
             <TodoList todos={this.state.todos} />
           </section>
-          <Footer />
+          <Footer reamining={reamining} />
         </div>
       </Router>
     )
