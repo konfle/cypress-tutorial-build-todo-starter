@@ -3,7 +3,7 @@ describe("List items", () => {
         cy.seedAndVisit()
     })
 
-    it.only("Properly displays completed items", () => {
+    it("Properly displays completed items", () => {
         cy.get(".todo-list li")
           .filter(".completed")
           .should("have.length", 1)
@@ -11,5 +11,10 @@ describe("List items", () => {
           .should("be.checked")
           
         cy.contains(".todo-list li.completed", "Eggs")
+    })
+
+    it.only("Shows reaming todos in the footer", () => {
+        cy.get(".todo-count")
+          .should("contain", 3)
     })
 })
