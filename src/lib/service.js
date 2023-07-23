@@ -7,4 +7,7 @@ export const loadTodos = () =>
   axios.get("http://localhost:3030/api/todos")
 
 export const destroyTodo = (id) =>
-  axios.delete(`http://localhost:300/api/todos/${id}`)
+  axios.delete(`http://localhost:3030/api/todos/${id}`)
+
+export const updteTodo = (todo) => 
+  axios.put(`http://loclhost:3030/api/todos/${todo.id}`, todo)
