@@ -10,9 +10,11 @@ describe("Footer", () => {
     })
 
     context("With multiple todos", () => {
-        it.only("Dispalys plural todos in count", () => {
+        beforeEach(() => {
             cy.seedAndVisit()
+        })
 
+        it("Dispalys plural todos in count", () => {
             cy.get(".todo-count")
               .should("contain", "3 todos left")
         })
