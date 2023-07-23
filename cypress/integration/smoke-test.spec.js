@@ -19,7 +19,7 @@ describe("Smoke tests", () => {
   })
 
   context("With no todos", () => {
-    it.only("Saves new todos", () => {
+    it("Saves new todos", () => {
       const items = [
         {text: "Buy milk", expectedLength: 1},
         {text: "Buy eggs", expectedLength: 2},
@@ -41,6 +41,22 @@ describe("Smoke tests", () => {
         cy.get(".todo-list li")
           .should("have.length", todo.expectedLength)
         })
+    })
+  })
+
+  context("With active todos", () => {
+    beforeEach(() => {
+      cy.fixture("todos")
+        .each(todo => {
+          const newTodo = Cypress._.merge(todo, {isComplete: false})
+          cy.request("POST", "/api/todos", newTodo)
+        })
+      cy.visit("/")
+    })
+
+    it("Loads existing data from the DB", () => {
+      cy.get(".todo-list li")
+        .should("have.length", 4)
     })
   })
 })
