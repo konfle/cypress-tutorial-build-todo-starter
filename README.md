@@ -39,4 +39,8 @@ npm run cypress
 
 5. Todo item behavior
 
-    Following tutorial I had update app to properly display todo items based on their isComplete property, adding tests to verify the proper behavior as we go. From there, I have  tested and implement the item deletion functionality. In this part was covered interacting with an element that is hidden unless hovered over and look at different ways of handling this situation. I had  also look at the appropriate way to hold onto references to previously queried DOM elements using .as() to create aliases.
+    Following the tutorial, I updated the app to correctly display todo elements based on their isComplete property, adding tests to verify the correct behaviour. I then tested and implemented the functionality to remove elements. This section discusses interacting with an element that is hidden unless it is hovered over, and looks at different ways to handle this situation. I also looked at the appropriate way to store references to previously searched DOM elements using .as() to create aliases.
+
+6. Toggling and debugging
+
+    Following the tutorial, I created a todo element switching test. While implementing the toggle function, I encountered a problem with our code and looked at how Cypress could help debug the code. I used the Cypress Command Log to narrow down the problem. I was then able to use the developer tools directly in Cypress to walk through the code and dig deeper into the problem. I saw how to update the state of the application while debugging and let testing confirm the theory on the cause of the error. After debugging, the code was refactoured to make it less error-prone, relying on tests to help fix it.
