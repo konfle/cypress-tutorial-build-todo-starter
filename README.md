@@ -26,6 +26,11 @@ Run Cypress test runner
 npm run cypress
 ```
 
+Run all tests (for example for CI)
+```console
+npm run cypress
+```
+
 ## Tutorial content:
 
 1. Project setup
