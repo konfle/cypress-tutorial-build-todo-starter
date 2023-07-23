@@ -52,3 +52,7 @@ npm run cypress
 8. Full end-to-end tests part 1
 
     I connected the back-end API to the front-end I was building. After connecting the back-end API, I created the first real end-to-end test. Using the back-end API, a consistent initial state is ensured, removing any existing data from the database. I then tested that the application can create and save new todos without a back end stubbed. I also saw how to listen using cy.wait() for XHR responses in tests to avoid errors caused by unpredictable response times.
+
+9. Full end-to-end tests part 2
+
+    Continuing with full end-to-end testing, this time seeding the database to test the application against a populated database. The pattern of adding cy.wait() commands to the tests was repeated to ensure the back end responded before moving on. Once I was to have the tests deleting and updating items against the real back end, I found out how to run the Cypress tests using cypress run, which gave the perfect setup for running the tests in a CI environment.
