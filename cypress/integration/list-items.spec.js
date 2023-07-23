@@ -55,7 +55,7 @@ describe("List items", () => {
           const target = Cypress._.head(todos)
           cy.route(
             "PUT",
-            "/api/todos/${targed.id}",
+            `/api/todos/${target.id}`,
             // _.merge to return updated response
             Cypress._.merge(target, {isCompleted: true})
           )
