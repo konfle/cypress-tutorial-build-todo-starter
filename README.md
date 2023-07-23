@@ -36,3 +36,7 @@ npm run cypress
 4. Loading data with fixtures
 
     Following tutorial I have implemented initial data loading for the todo app, using cy.server() and cy.route() to override the API call to load the data. I used fixation data to initialise the application state. As the test and application code iterated, I created and used custom commands to avoid unnecessary code duplication and keep our tests clean and readable.
+
+5. Todo item behavior
+
+    Following tutorial I had update app to properly display todo items based on their isComplete property, adding tests to verify the proper behavior as we go. From there, I have  tested and implement the item deletion functionality. In this part was covered interacting with an element that is hidden unless hovered over and look at different ways of handling this situation. I had  also look at the appropriate way to hold onto references to previously queried DOM elements using .as() to create aliases.
