@@ -44,3 +44,7 @@ npm run cypress
 6. Toggling and debugging
 
     Following the tutorial, I created a todo element switching test. While implementing the toggle function, I encountered a problem with our code and looked at how Cypress could help debug the code. I used the Cypress Command Log to narrow down the problem. I was then able to use the developer tools directly in Cypress to walk through the code and dig deeper into the problem. I saw how to update the state of the application while debugging and let testing confirm the theory on the cause of the error. After debugging, the code was refactoured to make it less error-prone, relying on tests to help fix it.
+
+7. Filters and data-driven tests
+
+    Following the tutorial I tested the footer behaviour of the application. First, I made sure that the footer correctly displays text in singular or plural, depending on the number of other tasks. Then I tested and implemented the list filtering function. I created a test for one of the filters and figured out how to connect React Router to make the filter links work. I then learnt how standard JavaScript data structures can be used to handle multiple assertions in a test, allowing multiple variations of filter behaviour to be tested in a single test.
