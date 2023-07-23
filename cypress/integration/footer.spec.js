@@ -18,5 +18,13 @@ describe("Footer", () => {
             cy.get(".todo-count")
               .should("contain", "3 todos left")
         })
+
+        it.only("Filters to active todos", () => {
+            cy.contains("Active")
+              .click()
+
+            cy.get(".todo-list li")
+              .should("have.length", 3)
+        })
     })
 })
