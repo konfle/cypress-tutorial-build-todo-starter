@@ -48,3 +48,7 @@ npm run cypress
 7. Filters and data-driven tests
 
     Following the tutorial I tested the footer behaviour of the application. First, I made sure that the footer correctly displays text in singular or plural, depending on the number of other tasks. Then I tested and implemented the list filtering function. I created a test for one of the filters and figured out how to connect React Router to make the filter links work. I then learnt how standard JavaScript data structures can be used to handle multiple assertions in a test, allowing multiple variations of filter behaviour to be tested in a single test.
+
+8. Full end-to-end tests part 1
+
+    I connected the back-end API to the front-end I was building. After connecting the back-end API, I created the first real end-to-end test. Using the back-end API, a consistent initial state is ensured, removing any existing data from the database. I then tested that the application can create and save new todos without a back end stubbed. I also saw how to listen using cy.wait() for XHR responses in tests to avoid errors caused by unpredictable response times.
