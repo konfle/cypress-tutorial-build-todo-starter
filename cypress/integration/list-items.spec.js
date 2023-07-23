@@ -57,7 +57,7 @@ describe("List items", () => {
             "PUT",
             `/api/todos/${target.id}`,
             // _.merge to return updated response
-            Cypress._.merge(target, {isCompleted: true})
+            Cypress._.merge(target, {isComplete: true})
           )
         })
 
