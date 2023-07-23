@@ -77,9 +77,12 @@ handleTodoSubmit (evt) {
             handleNewTodoChange={this.handleNewTodoChange} />
           </header>
           <section className="main">
-            <TodoList todos={this.state.todos}
-             handleDelete={this.handleDelete}
-             handleToggle={this.handleToggle} />
+          <Route path="/:filter?" render={({match}) => 
+            <TodoList 
+               todos={this.state.todos}
+               handleDelete={this.handleDelete}
+               handleToggle={this.handleToggle} />
+            } />
           </section>
           <Footer reamining={reamining} />
         </div>
