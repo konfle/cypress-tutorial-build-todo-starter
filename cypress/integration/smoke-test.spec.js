@@ -58,5 +58,22 @@ describe("Smoke tests", () => {
       cy.get(".todo-list li")
         .should("have.length", 4)
     })
+
+    it("Delete todos", () => {
+      cy.server()
+      cy.route("DELETE", "/api/todos/*")
+        .as("delete")
+      
+      cy.get(".todo-list li")
+        .each($el => {
+          cy.wrap($el)
+            .find(".destroy")
+            .invoke("show")
+            .click()
+
+          cy.wait("@delete")
+        })
+        .should("not.exist")
+    })
   })
 })
