@@ -2,6 +2,13 @@
 
 At beging I decide to follow the official video tutorial from [Cypress docs](https://docs.cypress.io/examples/tutorials).
 
+
+
+## Result of test execution
+
+![Alt text](cypress/images/2023-07-23_18h58_11.png)
+
+
 ## Commands
 
 Install project dependencies
