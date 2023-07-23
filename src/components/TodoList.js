@@ -19,5 +19,5 @@ export default props =>
     {props.todos.map(todo => 
       <TodoItem key={todo.id} {...todo} 
         handleDelete={props.handleDelete}
-        handleToggle={props.handleToggle} />)}
+        handleToggle={props.handleToggle}/>)}
   </ul>
