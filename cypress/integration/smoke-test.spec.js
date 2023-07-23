@@ -76,7 +76,7 @@ describe("Smoke tests", () => {
         .should("not.exist")
     })
 
-    it.only("Toggles todos", () => {
+    it("Toggles todos", () => {
       const clickAndWait = ($el) => {
         cy.wrap($el)
         .as("item")
