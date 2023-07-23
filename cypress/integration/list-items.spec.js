@@ -48,7 +48,7 @@ describe("List items", () => {
           })
     })
 
-    it.only("Marks an incomplete item complete", () => {
+    it("Marks an incomplete item complete", () => {
       cy.fixture("todos")
         .then(todos => {
           // _.head to take a first item of array
