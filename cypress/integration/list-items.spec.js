@@ -47,4 +47,33 @@ describe("List items", () => {
             expect($list.text()).to.not.contain("Milk");
           })
     })
+
+    it.only("Marks an incomplete item complete", () => {
+      cy.fixture("todos")
+        .then(todos => {
+          // _.head to take a first item of array
+          const target = Cypress._.head(todos)
+          cy.route(
+            "PUT",
+            "/api/todos/${targed.id}",
+            // _.merge to return updated response
+            Cypress._.merge(target, {isCompleted: true})
+          )
+        })
+
+      cy.get(".todo-list li")
+        .first()
+        .as("first-todo")
+
+      cy.get("@first-todo")
+        .find(".toggle")
+        .click()
+        .should("be.checked")
+
+      cy.get("@first-todo")
+        .should("have.class", "completed")
+
+      cy.get(".todo-count")
+        .should("contain", 2)
+    })
 })
