@@ -45,14 +45,13 @@ handleToggle (id) {
   }
   updateTodo(updated)
     .then(({data}) => {
-      debugger
       const targetIndex = this.state.todos.findIndex(
         t => t.id === data.id
       )
       const todos = [
         ...this.state.todos.slice(0, targetIndex),
         data,
-        ...this.state.todos.slice(targetIndex)
+        ...this.state.todos.slice(targetIndex + 1)
       ]
       this.setState({todos: todos})
     })
